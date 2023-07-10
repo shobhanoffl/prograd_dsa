@@ -14,23 +14,23 @@ package solvedprobs;
 class Employee{
     int id;
     String name;
+
+    public void calculatePay(String name, int id, double salary){
+        System.out.println("Monthly Salary of "+name+" with ID "+id+" is Rs."+salary+"/-");
+    }
+
+    public void calculatePay(String name, int id, double hourlyRate, double hoursWorked){
+        System.out.println("Weekly Salary of "+name+" with ID "+id+" is Rs."+(hourlyRate*hoursWorked)+"/-");
+    }
 }
 
 class SalariedEmployee extends Employee{
     double salary;
-
-    public void calculatePay(){
-        System.out.println("Monthly Salary of "+name+" with ID "+id+" is Rs."+salary+"/-");
-    }
 }
 
 class HourlyEmployee extends Employee{
     double hourlyRate;
     double hoursWorked;
-
-    public void calculatePay(){
-        System.out.println("Weekly Salary of "+name+" with ID "+id+" is Rs."+(hourlyRate*hoursWorked)+"/-");
-    }
 }
 public class PayrollProcessor {
     public static void main(String[] args) {
@@ -38,14 +38,14 @@ public class PayrollProcessor {
         newEmp1.id=1;
         newEmp1.name="Kumar";
         newEmp1.salary=50000;
-        newEmp1.calculatePay();
+        newEmp1.calculatePay(newEmp1.name, newEmp1.id, newEmp1.salary);
 
         HourlyEmployee newEmp2 = new HourlyEmployee();
         newEmp2.id=1;
         newEmp2.name="Tom";
         newEmp2.hourlyRate=300;
         newEmp2.hoursWorked=90;
-        newEmp2.calculatePay();
+        newEmp1.calculatePay(newEmp2.name, newEmp2.id, newEmp2.hourlyRate, newEmp2.hoursWorked);
 
     }
 }

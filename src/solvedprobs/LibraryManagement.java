@@ -14,7 +14,15 @@ Create a java code for the above requirements and demonstrate its functionalitie
 package solvedprobs;
 
 class libraryItem{
-    int id;
+    private int id;
+
+    public void setId(int newId){
+        id=newId;
+    }
+    public int getId(){
+        return id;
+    }
+
     String title;
     int year;
 }
@@ -23,8 +31,8 @@ class book extends libraryItem {
     String author;
 
     public void GetInfo(){
-        System.out.println("ID\tTitle\tYear\tAuthor");
-        System.out.println(id+"\t"+title+"\t"+year+"\t"+author);
+        System.out.println("Title\tYear\tAuthor");
+        System.out.println(title+"\t"+year+"\t"+author);
     }
 }
 
@@ -32,26 +40,28 @@ class magazine extends libraryItem{
     int issue;
 
     public void GetInfo(){
-        System.out.println("ID\tTitle\t\tYear\tIssue");
-        System.out.println(id+"\t"+title+"\t"+year+"\t"+issue);
+        System.out.println("Title\t\tYear\tIssue");
+        System.out.println(title+"\t"+year+"\t"+issue);
     }
 }
 public class LibraryManagement {
     public static void main(String[] args) {
         // Book
         book newComic = new book();
-        newComic.id=1;
+        newComic.setId(12);
         newComic.author="Alan Moore";
         newComic.title="Batman";
         newComic.year=1988;
+        System.out.println("ID : "+newComic.getId());
         newComic.GetInfo();
 
         // Magazine
         magazine newIndian = new magazine();
-        newIndian.id=1;
+        newIndian.setId(25);
         newIndian.title="Times Now";
         newIndian.issue=2;
         newIndian.year=2023;
+        System.out.println("ID : "+newIndian.getId());
         newIndian.GetInfo();
     }
 

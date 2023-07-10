@@ -10,14 +10,12 @@ Write a java code snippet to demonstrate the usage of these classes.
  */
 package solvedprobs;
 
-class Vehicle{
-    public void start(){
-        System.out.println("Vehicle Started");
-    }
-    public void stop(){
-        System.out.println("Vehicle Stopped");
-    }
+abstract class Vehicle{
+    abstract public void start();
+    abstract public void stop();
+
 }
+
 
 class Car extends Vehicle{
     public void start(){
@@ -38,10 +36,6 @@ class Motorcycle extends Vehicle{
 }
 public class VehicleClassifier {
     public static void main(String[] args) {
-        Vehicle newVehicle = new Vehicle();
-        newVehicle.start();
-        newVehicle.stop();
-
         Car newCar = new Car();
         newCar.start();
         newCar.stop();
