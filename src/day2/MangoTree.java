@@ -1,20 +1,22 @@
+package day2;
+
 import java.io.*;
 import java.util.*;
 public class MangoTree {
 
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
-        int rows=scanner.nextInt();
-        int columns=scanner.nextInt();
-        int tree=scanner.nextInt();
+        int r=scanner.nextInt();
+        int c=scanner.nextInt();
+        int t=scanner.nextInt();
 
-        if(tree<=rows) {
+        if(t<=r) {
             System.out.print(true);
         }
-        else if((tree-1)%rows==0) {
+        else if((t-1)%r==0) {
             System.out.print(true);
         }
-        else if(tree%rows==0) {
+        else if(t%r==0) {
             System.out.print(true);
         }
         else {

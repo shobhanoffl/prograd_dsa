@@ -1,3 +1,5 @@
+package day2;
+
 import java.io.*;
 import java.util.*;
 public class LabAllocation {
@@ -7,20 +9,20 @@ public class LabAllocation {
         int l1=sc.nextInt();
         int l2=sc.nextInt();
         int l3=sc.nextInt();
-        int students=sc.nextInt();
+        int s=sc.nextInt();
         String ans="";
 
         while(true) {
-            students=students+1;
-            if(students==l1) {
+            s=s+1;
+            if(s==l1) {
                 System.out.print("L1");
                 break;
             }
-            if(students==l2) {
+            if(s==l2) {
                 System.out.print("L2");
                 break;
             }
-            if(students==l3) {
+            if(s==l3) {
                 System.out.print("L3");
                 break;
             }
