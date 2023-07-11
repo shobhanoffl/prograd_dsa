@@ -11,7 +11,7 @@ issue (integer)
 Create a java code for the above requirements and demonstrate its functionalities.
 */
 
-package solvedprobs;
+package day3.solvedprobs;
 
 class libraryItem{
     private int id;
