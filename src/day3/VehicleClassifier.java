@@ -8,7 +8,7 @@ In the Car class, the start() method should print “Car started” and the stop
 In the Motorcycle class, the start() method should print “Motorcycle started” and the stop() method should print “Motorcycle stopped.”
 Write a java code snippet to demonstrate the usage of these classes.
  */
-package day3.solvedprobs;
+package day3;
 
 abstract class Vehicle{
     abstract public void start();
